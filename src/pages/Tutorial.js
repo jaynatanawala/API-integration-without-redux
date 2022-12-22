@@ -35,6 +35,7 @@ function Tutorial() {
         });
       }
       setShowModal(false);
+      callListTutorial();
     } catch (error) {
       Swal.fire({
         icon: "error",

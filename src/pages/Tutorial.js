@@ -103,7 +103,7 @@ function Tutorial() {
       {/* tutorial listing */}
       <div className="row">
         <h5 className="mb-0 mt-4">List of Tutorials</h5>
-        {tutorialList.length &&
+        {tutorialList.length ? (
           tutorialList.map((item) => (
             <div className="col-4" key={item.id}>
               <Link to={`/${item.id}`} style={{ textDecoration: "none" }}>
@@ -118,7 +118,10 @@ function Tutorial() {
                 </div>
               </Link>
             </div>
-          ))}
+          ))
+        ) : (
+          <p>No tutorial found</p>
+        )}
       </div>
 
       {/* <Outlet /> */}
